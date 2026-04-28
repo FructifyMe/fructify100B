@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mendalka Case Resources</title>
+<style>
+  :root {
+    --navy: #0f2747;
+    --navy-light: #1d3a63;
+    --slate: #475569;
+    --slate-light: #94a3b8;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --accent: #b91c1c;
+    --accent-soft: #fef2f2;
+    --good: #047857;
+    --good-soft: #ecfdf5;
+    --warn: #b45309;
+    --warn-soft: #fffbeb;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  header.site-header {
+    background: var(--navy);
+    color: #fff;
+    padding: 28px 0 24px;
+    border-bottom: 4px solid var(--accent);
+  }
+  header.site-header h1 {
+    margin: 0 0 6px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  header.site-header .sub {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 14px;
+  }
+  .status-banner {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    padding: 16px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  .status-banner strong { color: var(--accent); }
+  nav.tabs {
+    display: flex;
+    gap: 0;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  }
+  nav.tabs button {
+    background: transparent;
+    border: none;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--muted);
+    border-bottom: 3px solid transparent;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  nav.tabs button:hover { color: var(--navy); background: #f1f5f9; }
+  nav.tabs button.active {
+    color: var(--navy);
+    border-bottom-color: var(--accent);
+  }
+  main { padding: 28px 0 60px; }
+  section.tab-content { display: none; }
+  section.tab-content.active { display: block; }
+  h2 {
+    font-size: 22px;
+    color: var(--navy);
+    margin: 32px 0 12px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  h2:first-child { margin-top: 0; }
+  h3 {
+    font-size: 17px;
+    color: var(--navy-light);
+    margin: 22px 0 8px;
+    font-weight: 600;
+  }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  .card.callout-key {
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(to right, #fef2f2 0%, #ffffff 50%);
+  }
+  .key-sentence {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--navy);
+    font-style: italic;
+    padding: 14px 18px;
+    background: #fffbe8;
+    border-left: 4px solid #ca8a04;
+    border-radius: 4px;
+    margin: 12px 0;
+  }
+  .do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 12px 0;
+  }
+  @media (max-width: 640px) {
+    .do-dont { grid-template-columns: 1fr; }
+  }
+  .do-dont .panel {
+    padding: 16px 18px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .do-dont .do { background: var(--good-soft); border-color: #a7f3d0; }
+  .do-dont .dont { background: var(--accent-soft); border-color: #fecaca; }
+  .do-dont h4 { margin: 0 0 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .do-dont .do h4 { color: var(--good); }
+  .do-dont .dont h4 { color: var(--accent); }
+  .do-dont ul { margin: 0; padding-left: 18px; }
+  table.script {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px;
+    font-size: 14px;
+  }
+  table.script th, table.script td {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.script th {
+    background: var(--navy);
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  table.script tr:nth-child(even) td { background: #f8fafc; }
+  table.framework {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px;
+    font-size: 14px;
+  }
+  table.framework th, table.framework td {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+    text-align: left;
+  }
+  table.framework th {
+    background: #f1f5f9;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .pill.now { background: var(--accent); color: #fff; }
+  .pill.soon { background: var(--warn); color: #fff; }
+  .pill.hold { background: var(--slate); color: #fff; }
+  .actions-list { list-style: none; padding: 0; margin: 0; }
+  .actions-list li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  .actions-list li.soon { border-left-color: var(--warn); }
+  .actions-list li.hold { border-left-color: var(--slate); }
+  .actions-list .label { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .doc-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 18px;
+    transition: all 0.15s;
+  }
+  .doc-card:hover { border-color: var(--navy); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(15,39,71,0.08); }
+  .doc-card a { color: var(--navy); text-decoration: none; font-weight: 600; font-size: 15px; }
+  .doc-card a:hover { text-decoration: underline; }
+  .doc-card p { font-size: 13px; color: var(--muted); margin: 6px 0 0; line-height: 1.5; }
+  .doc-card .file-type {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: #e2e8f0;
+    color: var(--slate);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .doc-card .file-type.pdf { background: #fee2e2; color: var(--accent); }
+  footer {
+    background: #0a1729;
+    color: #94a3b8;
+    padding: 26px 0;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  footer p { margin: 4px 0; }
+  .reminder {
+    background: var(--warn-soft);
+    border-left: 4px solid var(--warn);
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  .legal-disclaimer {
+    background: #f1f5f9;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .quick-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 14px 0 18px;
+  }
+  .fact {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+    border-radius: 6px;
+  }
+  .fact .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .fact .value { font-weight: 600; color: var(--navy); font-size: 14px; }
+  a.inline { color: var(--navy-light); }
+  code, .citation { font-family: "SF Mono", Consolas, Menlo, monospace; font-size: 13px; background: #f1f5f9; padding: 1px 6px; border-radius: 3px; color: var(--navy); }
+  .toc-mini { font-size: 14px; color: var(--muted); margin: 0 0 18px; }
+  .toc-mini a { color: var(--navy-light); text-decoration: none; margin-right: 14px; }
+  .toc-mini a:hover { text-decoration: underline; }
+  @media print {
+    nav.tabs, footer { display: none; }
+    section.tab-content { display: block !important; page-break-after: always; }
+    body { background: white; font-size: 12px; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>Mendalka Case Resources</h1>
+    <p class="sub">Massachusetts firefighter disability retirement &mdash; M.G.L. c. 41 &sect; 100B research package &mdash; updated April 28, 2026</p>
+    <div class="status-banner">
+      <strong>Status:</strong> Town moving toward involuntary disability retirement. Town claims medical liability ends at retirement, citing &sect;111F. Research thesis: &sect;100B governs post-retirement medical and Danvers accepted it in 1973. <strong>Do not sign anything without independent counsel review.</strong>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <div class="container" style="display: flex; gap: 0;">
+    <button class="active" role="tab" data-tab="john">For John</button>
+    <button role="tab" data-tab="counsel">For Counsel</button>
+    <button role="tab" data-tab="docs">All Documents</button>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <!-- =================== TAB: FOR JOHN =================== -->
+    <section class="tab-content active" id="tab-john">
+
+      <h2>The one thing to remember</h2>
+      <div class="card callout-key">
+        <p>Section 111F ending at retirement is not the same as &ldquo;the Town owes no medical.&rdquo; The statute that covers your post-retirement medical care for these injuries is <strong>M.G.L. c. 41, &sect; 100B</strong>. Danvers accepted &sect;100B at Town Meeting on <strong>March 20, 1973</strong>. It is in your CBA at <strong>Article 16, Section 1</strong>. The Town has not rescinded it. You have not waived it.</p>
+        <div class="key-sentence">
+          &ldquo;Section 111F ending at retirement says nothing about &sect;100B, which Danvers accepted in 1973 and incorporated into the current CBA &mdash; and &sect;100B is exactly the statute designed to cover my post-retirement medical care for these injuries.&rdquo;
+        </div>
+      </div>
+
+      <h2>Three things you must hold to</h2>
+      <div class="card">
+        <ol>
+          <li><strong>&sect;111F ending at retirement is not the same as &ldquo;the Town owes no medical.&rdquo;</strong> Don't let anyone collapse the two.</li>
+          <li><strong>The statute that matters is &sect;100B.</strong> Accepted by Danvers 3/20/1973. In the CBA at Article 16 &sect;1. Pays for medical care of your duty injuries <em>after</em> you retire.</li>
+          <li><strong>Don't sign anything today.</strong> Not retirement papers. Not a release. Not a settlement. Not a &ldquo;memorandum of understanding.&rdquo; Nothing.</li>
+        </ol>
+      </div>
+
+      <h2>Do / Don't</h2>
+      <div class="do-dont">
+        <div class="panel do">
+          <h4>Do</h4>
+          <ul>
+            <li>Hand the union attorney the union counsel memo at the start of the meeting</li>
+            <li>Ask for written acknowledgment that &sect;100B applies to you post-retirement</li>
+            <li>Take notes. Get a copy of any notes the union attorney is taking</li>
+            <li>Ask the union to commit, in writing, to grieve under Article 4 if the Town refuses</li>
+            <li>Walk out calmly if you feel pressured to sign</li>
+            <li>Send Mike updates on what was said and any documents handed to you</li>
+          </ul>
+        </div>
+        <div class="panel dont">
+          <h4>Don't</h4>
+          <ul>
+            <li>Sign retirement papers, releases, settlements, or MOUs at the meeting</li>
+            <li>Accept the Town's framing that &ldquo;111F ends at retirement&rdquo; closes the issue</li>
+            <li>Agree to waive any c. 41 medical indemnification rights</li>
+            <li>Make a final decision on retirement timing or pension amount today</li>
+            <li>Drop a pending grievance in exchange for vague promises</li>
+            <li>Talk about the case on social media or with anyone outside the immediate circle</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>If the Town says &rarr; You say</h2>
+      <table class="script">
+        <thead>
+          <tr><th style="width:50%;">Town says</th><th>You say</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>&ldquo;111F ends at retirement, so we're done.&rdquo;</td><td>&ldquo;Right about 111F. What about &sect;100B? Danvers accepted it in 1973 and it's in our CBA at Article 16.&rdquo;</td></tr>
+          <tr><td>&ldquo;We don't pay medical after retirement.&rdquo;</td><td>&ldquo;The Town Bylaws say differently. Chapter XIX establishes the panel that administers &sect;100B claims. Why is the Town ignoring its own bylaws?&rdquo;</td></tr>
+          <tr><td>&ldquo;&sect;100B is permissive, not mandatory.&rdquo;</td><td>&ldquo;Once accepted, the panel must certify if the five criteria are met. Arbitrary denial is reviewable in court.&rdquo;</td></tr>
+          <tr><td>&ldquo;You'll have your insurance and your pension.&rdquo;</td><td>&ldquo;&sect;100B is on top of those. It exists specifically because retirees need indemnification for treatment of duty injuries. That's me.&rdquo;</td></tr>
+          <tr><td>&ldquo;Just sign here and we'll work it out.&rdquo;</td><td>&ldquo;I'm not signing anything today. I'll review with counsel and come back.&rdquo;</td></tr>
+          <tr><td>&ldquo;We need to wrap this up before [date].&rdquo;</td><td>&ldquo;Statutory rights don't run on the Town's calendar. I'm not signing under pressure.&rdquo;</td></tr>
+          <tr><td>&ldquo;Light duty isn't an option.&rdquo;</td><td>&ldquo;CBA Article 22, Section 14 references a light-duty committee. Has a policy been adopted? If a role exists, I can do it.&rdquo;</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Action items</h2>
+      <ul class="actions-list">
+        <li>
+          <div class="label"><span class="pill now">Now</span></div>
+          <strong>Don't sign anything.</strong> Retirement papers, releases, settlements, MOUs &mdash; nothing without independent attorney review.
+        </li>
+        <li>
+          <div class="label"><span class="pill now">Now</span></div>
+          <strong>Save every Town communication.</strong> Letters, emails, texts, voicemails. Keep them organized by date.
+        </li>
+        <li>
+          <div class="label"><span class="pill now">Now</span></div>
+          <strong>Engage independent labor counsel.</strong> The two firms in MA that handle exactly this kind of case for firefighters: <strong>Sandulli Grace</strong> and <strong>Pyle Rome Ehrenberg</strong>. Call both, hire one.
+        </li>
+        <li>
+          <div class="label"><span class="pill soon">Soon</span></div>
+          <strong>Complete the intake checklist.</strong> Send Mike whatever you have on file: medical records, Town communications, &sect;111F payment history, union correspondence. See <a href="intake_checklist.md">intake_checklist.md</a>.
+        </li>
+        <li>
+          <div class="label"><span class="pill soon">Soon</span></div>
+          <strong>Get a written narrative report from your treating neurosurgeon</strong> covering: mechanism of injury, current diagnosis, hardware status, prognosis, anticipated future treatment, restrictions, light-duty feasibility, and causation. This is foundational evidence for both the ADR proceeding and any &sect;100B claim.
+        </li>
+        <li>
+          <div class="label"><span class="pill soon">Soon</span></div>
+          <strong>Demand light-duty assessment in writing</strong> under CBA Article 22, &sect;14. If a light-duty role exists and you can perform it, the Town's &ldquo;permanent incapacity&rdquo; element fails.
+        </li>
+        <li>
+          <div class="label"><span class="pill hold">Hold for counsel</span></div>
+          <strong>File the &sect;100 application now</strong> for any unreimbursed medical expenses. Even a nominal application establishes the framework. Coordinate with attorney before filing.
+        </li>
+        <li>
+          <div class="label"><span class="pill hold">Hold for counsel</span></div>
+          <strong>Send formal written objection</strong> to the Town's &ldquo;no post-retirement medical liability&rdquo; position, expressly invoking &sect;100B and CBA Article 16 &sect;1. Memorialize this to defeat any later waiver/estoppel defenses.
+        </li>
+      </ul>
+
+      <h2>Things you do <em>not</em> have to decide today</h2>
+      <div class="card">
+        <ul>
+          <li>Whether to retire</li>
+          <li>The amount of any pension or settlement</li>
+          <li>Whether to take a &sect;101 lump sum</li>
+          <li>Whether to sign a release</li>
+          <li>Whether to drop any pending grievance</li>
+          <li>Whether to accept the Town's framing of &ldquo;what 111F means&rdquo;</li>
+        </ul>
+      </div>
+
+      <h2>If you feel pressured</h2>
+      <div class="card">
+        <p>Say, calmly: <em>&ldquo;I appreciate the meeting. I need to take this back, review with my own counsel, and respond in writing. I'm not making decisions or signing anything today.&rdquo;</em></p>
+        <p>Then leave if needed. You have the right to walk out.</p>
+      </div>
+
+      <div class="reminder">
+        <strong>Reminder:</strong> The research in this package is not legal advice. Before any major decision &mdash; accepting retirement, signing settlement documents, missing a deadline &mdash; you need a Massachusetts attorney experienced in c. 41 / c. 32 firefighter matters. Sandulli Grace and Pyle Rome Ehrenberg are the right starting points.
+      </div>
+
+    </section>
+
+    <!-- =================== TAB: FOR COUNSEL =================== -->
+    <section class="tab-content" id="tab-counsel">
+
+      <p class="toc-mini">
+        <a href="#core-thesis">Core thesis</a>
+        <a href="#framework">Three-track framework</a>
+        <a href="#why-fails">Why the Town's position fails</a>
+        <a href="#inconsistency">Town's internal inconsistency</a>
+        <a href="#procedural">Procedural posture</a>
+        <a href="#sequence">Recommended action sequence</a>
+        <a href="#authorities">Key authorities</a>
+      </p>
+
+      <h2 id="core-thesis">Core thesis</h2>
+      <div class="card">
+        <p>The Town's statement that &ldquo;111F ends at retirement&rdquo; is technically correct as to &sect;111F and substantively non-responsive to John's overall medical-care entitlement. The operative statute for John's post-retirement medical care is <strong>M.G.L. c. 41, &sect; 100B</strong>, which Danvers formally accepted at Town Meeting on March 20, 1973 and incorporated into the current Fire CBA at Article 16, &sect;1.</p>
+        <p>&sect;100B is specifically designed to indemnify retired ADR firefighters for medical expenses that are the natural and proximate result of the disability for which they were retired. The package supports an aggressive defense of John's &sect;100B rights and a procedural critique of the involuntary retirement process.</p>
+      </div>
+
+      <h2 id="framework">Three-track framework</h2>
+      <table class="framework">
+        <thead>
+          <tr><th>Track</th><th>Statute</th><th>Status</th><th>Provides</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Active wage/medical</strong></td>
+            <td>M.G.L. c. 41, &sect; 111F</td>
+            <td>Currently in effect; ends at retirement</td>
+            <td>Full pay tax-free + medical during incapacity</td>
+          </tr>
+          <tr>
+            <td><strong>2. ADR retirement</strong></td>
+            <td>M.G.L. c. 32, &sect;&sect; 7, 16(1)</td>
+            <td>Town pursuing involuntarily</td>
+            <td>Pension allowance (~72% of regular comp; possible &sect;94B presumption enhancements)</td>
+          </tr>
+          <tr>
+            <td><strong>3. Post-retirement medical</strong></td>
+            <td>M.G.L. c. 41, &sect; 100B (Danvers accepted 3/20/1973)</td>
+            <td>Not yet activated</td>
+            <td>Indemnification for all reasonable medical expenses causally connected to retirement disability</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Track 3 must be affirmatively activated. The Town's strategy appears designed to retire John on Track 2 while letting Track 3 die unactivated. Open the &sect;100B file <em>before</em> retirement is finalized.</p>
+
+      <h2 id="why-fails">Why the Town's position fails</h2>
+      <div class="card">
+        <p>The Town conflates &sect;111F with &sect;100/&sect;100B. The differences are decisive:</p>
+        <h3>&sect;111F (the Town is right that this ends at retirement)</h3>
+        <ul>
+          <li>Pays full salary plus medical during <em>active-employee incapacity</em></li>
+          <li>Statutory text expressly terminates at retirement</li>
+          <li>Confirmed by <em>Politano v. Board of Selectmen of Watertown</em>, 12 Mass. App. Ct. 738 (1981)</li>
+        </ul>
+        <h3>&sect;100 (independent of retirement)</h3>
+        <ul>
+          <li>Indemnifies medical, surgical, hospital, nursing, pharmaceutical, prosthetic, podiatry expenses incurred as the natural and proximate result of duty injury</li>
+          <li>Triggered by the <em>injury</em>, not by employment status</li>
+          <li><em>Ware v. Hardwick</em>, 67 Mass. App. Ct. 325, 332 (2006): &sect;100 medical indemnification has no preclusive interaction with retirement proceedings &mdash; independent claims</li>
+          <li>Two-year filing window for Superior Court review of denials</li>
+        </ul>
+        <h3>&sect;100B (centerpiece for John's post-retirement period)</h3>
+        <ul>
+          <li>Specifically indemnifies retired ADR firefighters for post-retirement medical expenses</li>
+          <li>Five enumerated certification criteria (causation to retirement disability, post-acceptance, six-month service window, no disqualifying conduct, reasonableness)</li>
+          <li>Requires local acceptance &mdash; <strong>Danvers accepted on March 20, 1973</strong></li>
+          <li>Standing panel established under Town Bylaw Chapter XIX (Town Manager + Town Counsel + Physician)</li>
+          <li><strong>Incorporated into the Fire CBA at Article 16, &sect;1</strong> (FY25&ndash;FY27)</li>
+        </ul>
+        <p>The legislative pattern reinforces the framework: when the Massachusetts Legislature has secured post-retirement medical care for individual firefighters via special acts, it has used &sect;&sect; 100 and 100B as the framework. <em>See</em> H.5060 (Richard Lopez, Boston Fire) &mdash; &ldquo;shall be entitled to receive indemnification for all hospital, medical and related expenses ... after the date of his retirement ... in accordance with sections 100 and 100B of chapter 41 of the General Laws.&rdquo;</p>
+      </div>
+
+      <h2 id="inconsistency">The Town's internal inconsistency</h2>
+      <div class="card">
+        <p>The Town is pursuing &sect;7 accidental disability retirement, which requires regional medical panel certification that John's neck injuries are the &ldquo;natural and proximate result of an injury sustained in the performance of duty.&rdquo; That is precisely the causation language &sect;100B(1) uses for post-retirement medical indemnification.</p>
+        <p>The Town cannot consistently maintain:</p>
+        <ul>
+          <li>John's neck injuries are sufficiently incapacitating and causally connected to duty to justify forcing him into ADR; <strong>and</strong></li>
+          <li>Those same neck injuries are not the natural and proximate result of the disability for which he is being retired.</li>
+        </ul>
+        <p>If the Town's &sect;7 case succeeds, the Town has built John's &sect;100B causation case for him.</p>
+      </div>
+
+      <h2 id="procedural">Procedural posture and leverage points</h2>
+      <h3>Involuntary retirement &mdash; M.G.L. c. 32, &sect; 16(1)</h3>
+      <p>The Town must:</p>
+      <ul>
+        <li>File an Involuntary Retirement Application with the Danvers Contributory Retirement Board on PERAC's prescribed form</li>
+        <li>Include a &ldquo;fair summary of the facts upon which such opinion is premised&rdquo;</li>
+        <li>Serve John by registered mail, return receipt, with: (a) true copy of application, (b) statement of retirement options, (c) statement of hearing rights, (d) statement of review rights</li>
+      </ul>
+
+      <h3>John's procedural rights</h3>
+      <ul>
+        <li><strong>Article 23 physical exam (CBA):</strong> John selects the physician. Town pays. 14-day window if Administrative Leave is invoked.</li>
+        <li><strong>Regional medical panel (PERAC):</strong> Three-physician panel. Choice of single combined exam or three separate. 14 days' notice. Right to submit treating-physician records and narrative.</li>
+        <li><strong>Retirement Board hearing:</strong> 30 days' notice. Right to counsel, evidence, cross-examination. Decision within 180 days.</li>
+        <li><strong>Appeals:</strong> DALA &rarr; CRAB &rarr; Superior Court (c. 30A) <em>or</em> District Court alternative under c. 32, &sect; 16(3).</li>
+      </ul>
+
+      <h3>Light-duty defense</h3>
+      <p>The &sect;7 standard requires inability to perform the <em>essential</em> duties of the firefighter position. CBA Article 22, &sect;14 references a light-duty policy committee that was to convene by June 30, 2022. Whether a policy was adopted is a fact requiring confirmation. If a light-duty role exists and John can perform it, the Town's &ldquo;permanent incapacity&rdquo; element may fail.</p>
+
+      <h2 id="sequence">Recommended action sequence</h2>
+      <h3>Immediate (within 30 days of retention)</h3>
+      <ol>
+        <li><strong>Confirm procedural status</strong> of any pending &sect;16(1) application. Inspect the registered-mail packet for compliance with statutory requirements. Procedural defects can be the basis for delay or dismissal.</li>
+        <li><strong>Send formal written objection</strong> to the Town's &ldquo;no post-retirement medical liability&rdquo; position, expressly invoking &sect;100B and CBA Article 16, &sect;1. Memorialize to defeat later waiver/estoppel defenses.</li>
+        <li><strong>Demand written acknowledgment</strong> from the Town that &sect;100B applies to John's situation post-retirement. The Town's resistance becomes evidence.</li>
+        <li><strong>File a &sect;100 application now</strong> for any unreimbursed medical expenses to date. Even a nominal application establishes the framework and a paper trail.</li>
+        <li><strong>Preserve and document</strong> all Town communications, all medical records, all &sect;111F payments, all health-insurance EOBs.</li>
+      </ol>
+      <h3>Pre-retirement</h3>
+      <ol>
+        <li>Engage treating neurosurgeon for a comprehensive narrative report.</li>
+        <li>Demand light-duty assessment under CBA Article 22, &sect;14. Document any failure to engage.</li>
+        <li>Build the regional medical panel record with complete treating-physician documentation submitted in advance.</li>
+        <li>Request and exercise the retirement board hearing. Build a complete record on both retirement and post-retirement medical issues.</li>
+        <li>Negotiate any release language to be hyper-specific. Releases for c. 41 medical indemnification should ideally not exist; if unavoidable, must specifically carve out &sect;100B.</li>
+      </ol>
+      <h3>Post-retirement</h3>
+      <ol>
+        <li>First &sect;100B application within 30 days of retirement, capturing the prior six months.</li>
+        <li>90-day cadence for subsequent applications (due to &sect;100B(3)'s six-month rolling lookback).</li>
+        <li>Dispute resolution paths for any panel denial: certiorari under c. 249, &sect; 4; declaratory judgment under c. 231A; CBA grievance and arbitration under Article 4 (since &sect;100B is incorporated); mandamus; possibly ULP under c. 150E if denial is a unilateral change.</li>
+      </ol>
+
+      <h2 id="authorities">Key authorities</h2>
+      <div class="card">
+        <h3>Statutes</h3>
+        <ul>
+          <li><a class="inline" href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section100" target="_blank">M.G.L. c. 41, &sect; 100</a></li>
+          <li><a class="inline" href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section100B" target="_blank">M.G.L. c. 41, &sect; 100B</a></li>
+          <li><a class="inline" href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section111F" target="_blank">M.G.L. c. 41, &sect; 111F</a></li>
+          <li>M.G.L. c. 32, &sect; 7 (accidental disability retirement)</li>
+          <li>M.G.L. c. 32, &sect; 16(1) (involuntary retirement procedure)</li>
+          <li>M.G.L. c. 32, &sect; 16(3) and (4) (appeals)</li>
+          <li>M.G.L. c. 249, &sect; 4 (certiorari)</li>
+          <li>M.G.L. c. 231A (declaratory judgment)</li>
+        </ul>
+        <h3>Cases</h3>
+        <ul>
+          <li><em>Ware, Town of v. Hardwick, Town of</em>, 67 Mass. App. Ct. 325 (2006) &mdash; primary &sect;100 authority</li>
+          <li><em>Wormstead v. Town Manager of Saugus</em>, 366 Mass. 659 (1975) &mdash; &ldquo;performance of duty&rdquo; interpretation</li>
+          <li><em>Politano v. Board of Selectmen of Watertown</em>, 12 Mass. App. Ct. 738 (1981) &mdash; &sect;111F termination at retirement (we accept)</li>
+          <li><em>DiGloria v. Chief of Police of Methuen</em>, 8 Mass. App. Ct. 506 (1979) &mdash; &ldquo;without fault&rdquo; standard</li>
+          <li><em>Hennessey v. Bridgewater</em>, 388 Mass. 219 (1983) &mdash; &sect;111F termination conditions</li>
+          <li><em>Paparo v. Town of Provincetown</em>, 34 Mass. App. Ct. 625 (1993) &mdash; anti-double-dipping rationale</li>
+          <li><em>Gardner v. City of Peabody</em>, 23 Mass. App. Ct. 168 (1986) &mdash; broad &ldquo;performance of duty&rdquo; reading</li>
+        </ul>
+        <h3>Local authorities</h3>
+        <ul>
+          <li>Danvers Town Bylaws Chapter XIX (Indemnification Panel) and Acceptance Record &mdash; <a class="inline" href="danvers_bylaws.pdf">PDF in this repo</a></li>
+          <li>Danvers Fire CBA, FY25&ndash;FY27, Articles 4, 9 &sect;5, 16, 22 &sect;14, 23 &mdash; <a class="inline" href="danvers_fire_cba_fy25-fy27.pdf">PDF in this repo</a></li>
+          <li>PERAC Involuntary Retirement Application form &mdash; <a class="inline" href="https://www.mass.gov/doc/involuntary-retirement-application/download" target="_blank">mass.gov</a></li>
+        </ul>
+      </div>
+
+      <div class="card" style="background: #f1f5f9;">
+        <h3>Note on case posture</h3>
+        <p>This case has unusually clean facts on the &sect;100B issue: a documented Town Meeting acceptance from 1973; a standing bylaw panel; a current CBA expressly incorporating the statute; a Town that is currently building John's &sect;100B causation case via its own &sect;7 ADR push; and no adverse Massachusetts appellate authority on &sect;100B specifically.</p>
+        <p>Principal risk is procedural &mdash; that John signs something during the retirement process that compromises &sect;100B rights. Principal opportunity is that the Town may not realize how strong John's &sect;100B posture is and may settle on more favorable terms than would otherwise be available, particularly if a written demand for &sect;100B acknowledgment is made early in the process.</p>
+      </div>
+
+      <div class="legal-disclaimer">
+        Research support produced pre-retention by Mike Sweeney / Fructify LLC. Not legal advice. Reflects research available at the time, offered to assist counsel's independent analysis. Counsel should independently verify all citations and consider any relevant DALA / CRAB administrative authority not exhaustively reviewed in this package.
+      </div>
+
+    </section>
+
+    <!-- =================== TAB: ALL DOCS =================== -->
+    <section class="tab-content" id="tab-docs">
+
+      <h2>Quick facts</h2>
+      <div class="quick-facts">
+        <div class="fact"><div class="label">Town</div><div class="value">Danvers, MA</div></div>
+        <div class="fact"><div class="label">CBA term</div><div class="value">FY25 &ndash; FY27</div></div>
+        <div class="fact"><div class="label">&sect;100 accepted</div><div class="value">3/18/1963</div></div>
+        <div class="fact"><div class="label">&sect;100B accepted</div><div class="value">3/20/1973</div></div>
+        <div class="fact"><div class="label">CBA citation</div><div class="value">Art. 16, &sect; 1</div></div>
+        <div class="fact"><div class="label">Bylaw panel</div><div class="value">Ch. XIX</div></div>
+      </div>
+
+      <h2>For John (start here)</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="johns_pocket_card.md">John's Pocket Card</a>
+          <p>One-page meeting card: the one sentence to remember, do/don't, &ldquo;if Town says &rarr; you say&rdquo; script, what you do not have to decide today. Print and bring to meetings.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="memo_for_union_counsel.md">Memo for Union Counsel</a>
+          <p>Hand to the union attorney at the start of the meeting. Frames the &sect;100B argument and what to demand from the Town.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="intake_checklist.md">Intake Checklist</a>
+          <p>What to send Mike: medical records, Town communications, &sect;111F payment history, union correspondence. Send what you have.</p>
+        </div>
+      </div>
+
+      <h2>For counsel (research package)</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="strategic_summary.md">Strategic Summary</a>
+          <p>One-page brief for counsel. The three-track framework, why the Town's position fails, recommended action sequence, key authorities. Start here.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="statutory_memo.md">Statutory Memo</a>
+          <p>Full statutory analysis: &sect;111F vs &sect;100 vs &sect;100B. Town acceptance record. CBA incorporation. The &sect;100B operative argument.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="caselaw_memo.md">Case Law Memo</a>
+          <p><em>Ware v. Hardwick</em>, <em>Wormstead</em>, <em>Politano</em>, and progeny. Lead authority and the absence of adverse authority on &sect;100B.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="cba_analysis.md">CBA Analysis</a>
+          <p>Detailed Danvers Fire CBA review. Article 16 incorporation. Article 4 grievance/arbitration. Articles 22, 23, 9 procedural levers.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="process_memo.md">Process Memo</a>
+          <p>Procedural roadmap with phased strategy: stabilize, file &sect;100, pre-retirement lockdown, post-retirement &sect;100B cadence.</p>
+        </div>
+      </div>
+
+      <h2>Source documents</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="file-type pdf">pdf</span>
+          <a href="danvers_fire_cba_fy25-fy27.pdf">Danvers Fire CBA (FY25&ndash;FY27)</a>
+          <p>The actual collective bargaining agreement. Article 16 &sect;1 incorporates &sect;&sect;100/100A/100B/100D.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type pdf">pdf</span>
+          <a href="danvers_bylaws.pdf">Danvers Town Bylaws</a>
+          <p>Includes Chapter XIX (Indemnification Panel) and the statute acceptance record.</p>
+        </div>
+      </div>
+
+      <h2>Project meta</h2>
+      <div class="doc-grid">
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="project.md">project.md</a>
+          <p>Master project framework.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="memory.md">memory.md</a>
+          <p>Persistent facts, statutory cheat sheet, Danvers-specific record, update log.</p>
+        </div>
+        <div class="doc-card">
+          <span class="file-type">md</span>
+          <a href="claude.md">claude.md</a>
+          <p>Operating instructions for the research workflow.</p>
+        </div>
+      </div>
+
+      <div class="legal-disclaimer" style="margin-top: 30px;">
+        Research support, not legal advice. Independent Massachusetts public-sector labor counsel required for any actionable step. Recommended: Sandulli Grace; Pyle Rome Ehrenberg.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Mendalka Case Resources &middot; Pre-retention research package</p>
+    <p>Mike Sweeney / Fructify LLC &middot; Updated April 28, 2026</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('nav.tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('nav.tabs button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('section.tab-content').forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
