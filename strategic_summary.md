@@ -1,15 +1,15 @@
 # strategic_summary.md — Brief for Counsel
 
-**For:** Massachusetts public-sector labor counsel retained by John Mendalka
+**For:** Massachusetts public-sector labor counsel retained by John Marek
 **From:** Pre-retention research support, Mike Sweeney / Fructify LLC
 **Date:** April 28, 2026
-**Subject:** Forced disability retirement of John Mendalka, Danvers Fire Department firefighter, with Town denying post-retirement medical liability
+**Subject:** Forced disability retirement of John Marek, Danvers Fire Department firefighter, with Town denying post-retirement medical liability
 
 ---
 
 ## The Situation in One Page
 
-John Mendalka is a Danvers, Massachusetts firefighter who has sustained two on-duty injuries requiring extensive cervical spine surgery with hardware implantation. The Town of Danvers has determined he cannot return to duty and is moving to retire him involuntarily. The Town has further told John that, once retired, the Town has no further responsibility for medical treatment related to his line-of-duty injuries. The Town cites "111F" as authority for this position.
+John Marek is a Danvers, Massachusetts firefighter who has sustained two on-duty injuries requiring extensive cervical spine surgery with hardware implantation. The Town of Danvers has determined he cannot return to duty and is moving to retire him involuntarily. The Town has further told John that, once retired, the Town has no further responsibility for medical treatment related to his line-of-duty injuries. The Town cites "111F" as authority for this position.
 
 The Town's statement is technically correct about §111F (which terminates at retirement) and substantively wrong as applied to John's overall medical-care entitlement. **The operative statute for John's post-retirement medical care is M.G.L. c. 41, § 100B, which Danvers formally accepted at Town Meeting on March 20, 1973 and incorporated into the current Fire CBA at Article 16, §1.** §100B is specifically designed to indemnify retired ADR firefighters for medical expenses that are the natural and proximate result of the disability for which they were retired.
 

@@ -1,6 +1,6 @@
 # statutory_memo.md — The §111F vs §100/§100B Distinction, and Why the Town Is Wrong
 
-**Project:** Mendalka — 111F / §100 Research
+**Project:** Marek — 111F / §100 Research
 **Date:** April 28, 2026
 **Status:** Initial statutory analysis complete; awaiting John's documents to refine application to facts.
 
@@ -80,7 +80,7 @@ Danvers Town Meeting voted to accept §100 on **March 18, 1963** ("Chapter 41, S
 (Emphasis added.) Source: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section100B
 
 ### What §100B Does
-- §100B is *specifically designed* for the John Mendalka fact pattern: a firefighter or police officer retired under accidental disability retirement (M.G.L. c. 32, § 7) who continues to incur medical expenses related to the injury for which he retired.
+- §100B is *specifically designed* for the John Marek fact pattern: a firefighter or police officer retired under accidental disability retirement (M.G.L. c. 32, § 7) who continues to incur medical expenses related to the injury for which he retired.
 - Indemnifies for all reasonable hospital, medical, surgical, chiropractic, nursing, pharmaceutical, prosthetic, and podiatry expenses incurred after retirement.
 - Requires panel certification on five enumerated criteria.
 

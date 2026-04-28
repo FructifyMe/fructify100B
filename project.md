@@ -1,7 +1,7 @@
-# Mendalka — 111F / §100 Research Project
+# Marek — 111F / §100 Research Project
 
 ## Client
-**John Mendalka** — Firefighter, Danvers Fire Department (Danvers, MA)
+**John Marek** — Firefighter, Danvers Fire Department (Danvers, MA)
 Engaged via Mike Sweeney, Fructify LLC.
 
 ## Issue Summary

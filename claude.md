@@ -1,7 +1,7 @@
-# claude.md — Operating Instructions for Mendalka Project
+# claude.md — Operating Instructions for Marek Project
 
 ## Purpose
-This file governs how Claude operates inside the Mendalka 111F / §100 research folder. It supplements (does not replace) the Project Instructions set at the project level.
+This file governs how Claude operates inside the Marek 111F / §100 research folder. It supplements (does not replace) the Project Instructions set at the project level.
 
 ## Output Style
 - Plain prose. Bullets only for lists of statutes, cases, or discrete checklist items.

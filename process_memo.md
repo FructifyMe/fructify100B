@@ -1,6 +1,6 @@
 # process_memo.md — Procedural Roadmap & Leverage Points
 
-**Project:** Mendalka — 111F / §100 Research
+**Project:** Marek — 111F / §100 Research
 **Date:** April 28, 2026
 **Status:** Strategic synthesis. Sequencing depends on facts not yet confirmed (CBA local number, ADR application status, treating physician opinions, written Town communications). Update as facts come in.
 

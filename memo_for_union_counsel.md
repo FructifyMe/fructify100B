@@ -1,7 +1,7 @@
-# Memo to Union Counsel — John Mendalka
+# Memo to Union Counsel — John Marek
 
 **For:** Counsel to Danvers Permanent Firefighters Association (Local rep: Craig Vesey, President)
-**From:** John Mendalka
+**From:** John Marek
 **Date:** April 28, 2026
 **Re:** Forced disability retirement / post-retirement medical indemnification under M.G.L. c. 41, § 100B
 

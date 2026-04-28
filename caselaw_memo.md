@@ -1,6 +1,6 @@
 # caselaw_memo.md — Massachusetts Case Law on §§ 100, 100B, and 111F
 
-**Project:** Mendalka — 111F / §100 Research
+**Project:** Marek — 111F / §100 Research
 **Date:** April 28, 2026
 **Status:** Initial appellate survey complete. DALA/CRAB administrative authority noted but not exhaustively reviewed.
 

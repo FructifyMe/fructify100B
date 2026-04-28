@@ -1,4 +1,4 @@
-# Intake Checklist — John Mendalka
+# Intake Checklist — John Marek
 
 This is the information and documentation we need from you to build the strongest possible record. You don't need to have everything before we start, but each item we get sharpens the analysis. Send what you have, in any format.
 
