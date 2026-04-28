@@ -3,33 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marek Case Resources</title>
+<title>Marek Case Resources — Fructify LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #0f2747;
-    --navy-light: #1d3a63;
+    /* Fructify brand palette */
+    --navy: #0D1B2A;          /* primary — dark navy */
+    --navy-light: #1c3147;    /* lighter navy for headings */
+    --leaf: #4A7C2E;          /* secondary — leaf green */
+    --leaf-light: #7CB342;    /* accent — light green */
+    --leaf-bright: #9CCC65;   /* hover/highlight */
     --slate: #475569;
     --slate-light: #94a3b8;
     --bg: #f8fafc;
     --card: #ffffff;
     --border: #e2e8f0;
-    --accent: #b91c1c;
-    --accent-soft: #fef2f2;
-    --good: #047857;
-    --good-soft: #ecfdf5;
+    /* Semantic (kept for warnings, not brand) */
+    --danger: #b91c1c;
+    --danger-soft: #fef2f2;
     --warn: #b45309;
     --warn-soft: #fffbeb;
+    --good: #047857;
+    --good-soft: #ecfdf5;
     --text: #1e293b;
     --muted: #64748b;
+    /* Backwards-compat alias used in existing rules */
+    --accent: #4A7C2E;
+    --accent-soft: #f0f7e9;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.55;
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .container {
     max-width: 980px;
@@ -40,7 +53,7 @@
     background: var(--navy);
     color: #fff;
     padding: 28px 0 24px;
-    border-bottom: 4px solid var(--accent);
+    border-bottom: 4px solid var(--leaf-light);
   }
   header.site-header .brandline {
     display: flex;
@@ -49,23 +62,34 @@
     margin-bottom: 14px;
   }
   header.site-header .brand-mark {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: #fff;
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.18em;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid var(--leaf-light);
     padding: 5px 12px;
     border-radius: 3px;
+    background: rgba(124,179,66,0.08);
   }
-  header.site-header .brand-mark:hover { background: rgba(255,255,255,0.08); }
+  header.site-header .brand-mark:hover { background: rgba(124,179,66,0.18); }
+  header.site-header .brand-mark::before {
+    content: '';
+    display: inline-block;
+    width: 8px; height: 8px;
+    background: var(--leaf-light);
+    border-radius: 50%;
+  }
   header.site-header .brand-tag {
     color: #cbd5e1;
     font-size: 12px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     font-weight: 500;
+    font-style: italic;
   }
   header.site-header h1 {
     margin: 0 0 6px;
@@ -112,7 +136,7 @@
   nav.tabs button:hover { color: var(--navy); background: #f1f5f9; }
   nav.tabs button.active {
     color: var(--navy);
-    border-bottom-color: var(--accent);
+    border-bottom-color: var(--leaf-light);
   }
   main { padding: 28px 0 60px; }
   section.tab-content { display: none; }
@@ -327,8 +351,8 @@
 <header class="site-header">
   <div class="container">
     <div class="brandline">
-      <a class="brand-mark" href="https://fructify.solutions" target="_blank" rel="noopener">FRUCTIFY</a>
-      <span class="brand-tag">Case package prepared by Fructify LLC</span>
+      <a class="brand-mark" href="https://fructifyme.com" target="_blank" rel="noopener">FRUCTIFY</a>
+      <span class="brand-tag">Cultivate Growth. Engineer Success.</span>
     </div>
     <h1>Marek Case Resources</h1>
     <p class="sub">Massachusetts firefighter disability retirement &mdash; M.G.L. c. 41 &sect; 100B research package &mdash; updated April 28, 2026</p>
@@ -747,9 +771,10 @@
 
 <footer>
   <div class="container">
-    <p style="font-weight: 700; letter-spacing: 0.18em; color: #fff; font-size: 12px; margin-bottom: 8px;">FRUCTIFY LLC</p>
+    <p style="font-weight: 700; letter-spacing: 0.18em; color: var(--leaf-light); font-size: 12px; margin-bottom: 6px;">FRUCTIFY LLC</p>
+    <p style="font-style: italic; color: #cbd5e1; margin-bottom: 10px; font-size: 12px; letter-spacing: 0.04em;">Cultivate Growth. Engineer Success.</p>
     <p>Marek Case Resources &middot; Pre-retention research package</p>
-    <p>Mike Sweeney &middot; Updated April 28, 2026</p>
+    <p>Mike Sweeney &middot; <a href="https://fructifyme.com" style="color:#94a3b8;">fructifyme.com</a> &middot; Updated April 28, 2026</p>
   </div>
 </footer>
 
