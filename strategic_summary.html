@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Summary &mdash; Marek Case Resources</title>
+<style>
+:root {
+  --navy: #0f2747;
+  --navy-light: #1d3a63;
+  --slate: #475569;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --accent: #b91c1c;
+  --accent-soft: #fef2f2;
+  --good: #047857;
+  --warn: #b45309;
+  --warn-soft: #fffbeb;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+}
+.container { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+header.site-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 18px 0;
+  border-bottom: 4px solid var(--accent);
+}
+header.site-header .topline {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.18em;
+  color: #fff; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 5px 10px; border-radius: 3px;
+}
+.brand:hover { background: rgba(255,255,255,0.08); }
+.back-link {
+  font-size: 13px; color: #cbd5e1; text-decoration: none;
+}
+.back-link:hover { color: #fff; text-decoration: underline; }
+.page-meta {
+  margin-top: 12px; font-size: 13px; color: #cbd5e1;
+}
+.page-title {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 26px 0 22px;
+}
+.page-title h1 {
+  margin: 0 0 6px; font-size: 26px; color: var(--navy); font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.page-title .crumb { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.crumb.for-john { color: var(--accent); }
+.crumb.for-counsel { color: var(--navy-light); }
+.crumb.meta { color: var(--slate); }
+main.content { padding: 32px 0 60px; }
+main.content h1, main.content h2, main.content h3, main.content h4 {
+  color: var(--navy); margin-top: 28px; margin-bottom: 10px; line-height: 1.3;
+  font-weight: 600;
+}
+main.content h1 { font-size: 24px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+main.content h2 { font-size: 20px; }
+main.content h3 { font-size: 17px; color: var(--navy-light); }
+main.content h4 { font-size: 15px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.04em; }
+main.content p { margin: 0 0 14px; }
+main.content ul, main.content ol { margin: 0 0 14px; padding-left: 24px; }
+main.content li { margin-bottom: 6px; }
+main.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 16px 0; padding: 10px 18px;
+  background: var(--accent-soft); border-radius: 4px;
+  color: var(--text); font-style: italic;
+}
+main.content blockquote p:last-child { margin-bottom: 0; }
+main.content table {
+  width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px;
+}
+main.content th, main.content td {
+  border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top;
+}
+main.content th { background: var(--navy); color: #fff; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
+main.content tr:nth-child(even) td { background: #f8fafc; }
+main.content code {
+  font-family: "SF Mono", Consolas, Menlo, monospace; font-size: 13px;
+  background: #f1f5f9; padding: 1px 6px; border-radius: 3px; color: var(--navy);
+}
+main.content pre {
+  background: #0f172a; color: #e2e8f0; padding: 14px 18px; border-radius: 6px;
+  overflow-x: auto; font-size: 13px;
+}
+main.content pre code { background: transparent; color: inherit; padding: 0; }
+main.content a { color: var(--navy-light); }
+main.content hr { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+main.content em { color: var(--text); }
+main.content strong { color: var(--navy); }
+.legal-disclaimer {
+  background: #f1f5f9; border: 1px solid var(--border);
+  padding: 14px 18px; border-radius: 4px; margin: 24px 0;
+  font-size: 13px; color: var(--muted); font-style: italic;
+}
+footer {
+  background: #0a1729; color: #94a3b8; padding: 24px 0;
+  font-size: 13px; text-align: center; margin-top: 40px;
+}
+footer p { margin: 4px 0; }
+footer .brand-mark { color: #fff; font-weight: 700; letter-spacing: 0.18em; font-size: 12px; }
+@media print {
+  header.site-header, footer, .back-link { display: none; }
+  body { background: white; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="topline">
+      <a class="brand" href="https://fructify.solutions" target="_blank" rel="noopener">FRUCTIFY</a>
+      <a class="back-link" href="index.html">&larr; Back to dashboard</a>
+    </div>
+    <div class="page-meta">Marek Case Resources &middot; case package prepared by Fructify LLC</div>
+  </div>
+</header>
+
+<div class="page-title">
+  <div class="container">
+    <div class="crumb for-counsel">For Counsel</div>
+    <h1>Strategic Summary</h1>
+  </div>
+</div>
+
+<main class="content">
+  <div class="container">
+<h1>strategic_summary.md — Brief for Counsel</h1>
+<p><strong>For:</strong> Massachusetts public-sector labor counsel retained by John Marek<br />
+<strong>From:</strong> Pre-retention research support, Mike Sweeney / Fructify LLC<br />
+<strong>Date:</strong> April 28, 2026<br />
+<strong>Subject:</strong> Forced disability retirement of John Marek, Danvers Fire Department firefighter, with Town denying post-retirement medical liability</p>
+<hr />
+<h2>The Situation in One Page</h2>
+<p>John Marek is a Danvers, Massachusetts firefighter who has sustained two on-duty injuries requiring extensive cervical spine surgery with hardware implantation. The Town of Danvers has determined he cannot return to duty and is moving to retire him involuntarily. The Town has further told John that, once retired, the Town has no further responsibility for medical treatment related to his line-of-duty injuries. The Town cites "111F" as authority for this position.</p>
+<p>The Town's statement is technically correct about §111F (which terminates at retirement) and substantively wrong as applied to John's overall medical-care entitlement. <strong>The operative statute for John's post-retirement medical care is M.G.L. c. 41, § 100B, which Danvers formally accepted at Town Meeting on March 20, 1973 and incorporated into the current Fire CBA at Article 16, §1.</strong> §100B is specifically designed to indemnify retired ADR firefighters for medical expenses that are the natural and proximate result of the disability for which they were retired.</p>
+<p>Our research package supports an aggressive defense of John's §100B rights and a procedural critique of the involuntary retirement process. The package consists of seven memos (statutory, case law, CBA analysis, process roadmap, intake checklist, project framework, and this summary).</p>
+<hr />
+<h2>The Three-Track Framework</h2>
+<table>
+<thead>
+<tr>
+<th>Track</th>
+<th>Statute</th>
+<th>Status</th>
+<th>Provides</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Active wage/medical</td>
+<td>M.G.L. c. 41, § 111F</td>
+<td>Currently in effect; ends at retirement</td>
+<td>Full pay tax-free + medical during incapacity</td>
+</tr>
+<tr>
+<td>2. ADR retirement</td>
+<td>M.G.L. c. 32, §§ 7, 16(1)</td>
+<td>Town pursuing involuntarily</td>
+<td>Pension allowance (~72% of regular comp, with possible §94B presumption enhancements)</td>
+</tr>
+<tr>
+<td>3. Post-retirement medical</td>
+<td>M.G.L. c. 41, § 100B (Danvers accepted 3/20/1973)</td>
+<td>Not yet activated</td>
+<td>Indemnification for all reasonable medical expenses causally connected to retirement disability</td>
+</tr>
+</tbody>
+</table>
+<p>Track 3 must be affirmatively activated by John. The Town's strategy appears designed to retire John on Track 2 while letting Track 3 die unactivated. Our recommendation is to open the §100B file <em>before</em> retirement is finalized.</p>
+<hr />
+<h2>Why the Town's Position Fails</h2>
+<p>The Town conflates §111F with §100/§100B. The differences are decisive:</p>
+<p><strong>§111F (Town is right that this ends at retirement):</strong><br />
+- Pays full salary plus medical during <em>active-employee incapacity</em><br />
+- Statutory text expressly terminates at retirement<br />
+- Confirmed by <em>Politano v. Board of Selectmen of Watertown</em>, 12 Mass. App. Ct. 738 (1981)</p>
+<p><strong>§100 (independent of retirement):</strong><br />
+- Indemnifies medical, surgical, hospital, nursing, pharmaceutical, prosthetic, podiatry expenses incurred as the natural and proximate result of duty injury<br />
+- Triggered by the <em>injury</em>, not by employment status<br />
+- <em>Ware v. Hardwick</em>, 67 Mass. App. Ct. 325, 332 (2006): §100 medical indemnification has no preclusive interaction with retirement proceedings — they are independent claims<br />
+- Two-year filing window for Superior Court review of denials</p>
+<p><strong>§100B (the centerpiece for John's post-retirement period):</strong><br />
+- Specifically indemnifies retired ADR firefighters for post-retirement medical expenses<br />
+- Five enumerated certification criteria (causation to retirement disability, post-acceptance, six-month service window, no disqualifying conduct, reasonableness)<br />
+- Requires local acceptance — <strong>Danvers accepted on March 20, 1973</strong> (Town Bylaws acceptance record at https://www.danversma.gov/DocumentCenter/View/256/Town-Bylaws-PDF)<br />
+- Standing panel established under Town Bylaw Chapter XIX (Town Manager + Town Counsel + Physician)<br />
+- <strong>Incorporated into the Fire CBA at Article 16, §1</strong> (FY25–FY27 contract at https://www.danversma.gov/DocumentCenter/View/396/Fire-Department-Fiscal-Year-2025-to-Fiscal-Year-2027-PDF)</p>
+<p>The legislative pattern confirms the framework: the Massachusetts Legislature, when securing post-retirement medical care for individual firefighters via special acts, has used §§ 100 and 100B as the framework. <em>See</em> H.5060 (Richard Lopez, Boston Fire) — "shall be entitled to receive indemnification for all hospital, medical and related expenses ... after the date of his retirement ... in accordance with sections 100 and 100B of chapter 41 of the General Laws."</p>
+<hr />
+<h2>The Internal Inconsistency in the Town's Position</h2>
+<p>The Town is pursuing §7 accidental disability retirement, which requires a regional medical panel certification that John's neck injuries are the <strong>natural and proximate result of an injury sustained in the performance of duty</strong>. That is precisely the causation language §100B(1) uses for the post-retirement medical indemnification.</p>
+<p>The Town cannot consistently maintain:<br />
+- John's neck injuries are sufficiently incapacitating and causally connected to duty to justify forcing him into ADR, AND<br />
+- Those same neck injuries are not the natural and proximate result of the disability for which he is being retired</p>
+<p>If the Town's §7 case succeeds, the Town has built John's §100B causation case for him.</p>
+<hr />
+<h2>Procedural Posture and Leverage Points</h2>
+<h3>Involuntary Retirement Process — M.G.L. c. 32, § 16(1)</h3>
+<p>The Town must:<br />
+- File an Involuntary Retirement Application with the Danvers Contributory Retirement Board on PERAC's prescribed form<br />
+- Include a "fair summary of the facts upon which such opinion is premised"<br />
+- Serve John by registered mail, return receipt, with: (a) true copy of application, (b) statement of retirement options, (c) statement of hearing rights, (d) statement of review rights</p>
+<h3>John's Procedural Rights</h3>
+<ul>
+<li><strong>Article 23 physical exam (CBA):</strong> John selects the physician. Town pays. 14-day window if Administrative Leave is invoked.</li>
+<li><strong>Regional medical panel (PERAC):</strong> Three-physician panel. John chooses single combined exam or three separate exams. 14 days' notice. Right to submit treating physician records and narrative.</li>
+<li><strong>Retirement Board hearing:</strong> 30 days' notice. Right to counsel, evidence, cross-examination. Decision within 180 days.</li>
+<li><strong>Appeals:</strong> DALA → CRAB → Superior Court (c. 30A) OR District Court alternative under c. 32, § 16(3).</li>
+</ul>
+<h3>Light-Duty Defense</h3>
+<p>The §7 standard requires inability to perform the <em>essential</em> duties of the firefighter position. CBA Article 22, §14 references a light-duty policy committee that was to convene by June 30, 2022. Whether a light-duty policy was actually adopted is a fact requiring confirmation. If a light-duty role exists and John can perform it, the Town's "permanent incapacity" element may fail.</p>
+<hr />
+<h2>The Recommended Action Sequence</h2>
+<h3>Immediate (within 30 days of retention)</h3>
+<ol>
+<li><strong>Confirm procedural status</strong> of any pending §16(1) application. Inspect the registered-mail packet for compliance with statutory requirements. Procedural defects can be the basis for delay or dismissal.</li>
+<li><strong>Send formal written objection</strong> to the Town's "no post-retirement medical liability" position, expressly invoking §100B and CBA Article 16, §1. Memorialize this objection to defeat any later "waiver" or "estoppel" defenses.</li>
+<li><strong>Demand written acknowledgment</strong> from the Town that §100B applies to John's situation post-retirement. The Town's resistance becomes evidence.</li>
+<li><strong>File a §100 application now</strong> for any unreimbursed medical expenses to date. Even a nominal application establishes the framework and a paper trail.</li>
+<li><strong>Preserve and document</strong> all Town communications, all medical records, all §111F payments, all health-insurance EOBs.</li>
+</ol>
+<h3>Pre-Retirement</h3>
+<ol>
+<li><strong>Engage treating neurosurgeon</strong> for a comprehensive narrative report on mechanism of injury, current diagnosis, hardware status, prognosis, anticipated future treatment, restrictions, light-duty feasibility, and causation.</li>
+<li><strong>Demand light-duty assessment</strong> under CBA Article 22, §14. Document any failure to engage.</li>
+<li><strong>Build the regional medical panel record</strong> with complete treating-physician documentation submitted in advance.</li>
+<li><strong>Request and exercise</strong> the retirement board hearing. Build a complete record on both retirement and post-retirement medical issues.</li>
+<li><strong>Negotiate any release language to be hyper-specific.</strong> Releases for c. 41 medical indemnification should ideally not exist; if unavoidable, must specifically carve out §100B.</li>
+</ol>
+<h3>Post-Retirement</h3>
+<ol>
+<li><strong>First §100B application within 30 days of retirement</strong> capturing the prior six months.</li>
+<li><strong>90-day cadence</strong> for subsequent applications (due to §100B(3)'s six-month rolling lookback).</li>
+<li><strong>Dispute resolution paths</strong> for any panel denial:<br />
+ - Action in nature of certiorari under c. 249, § 4<br />
+ - Declaratory judgment under c. 231A<br />
+ - CBA grievance and arbitration under Article 4 (since §100B is an incorporated contract term)<br />
+ - Mandamus<br />
+ - Possibly ULP under c. 150E if denial constitutes unilateral change</li>
+</ol>
+<hr />
+<h2>Open Questions for John</h2>
+<p>The intake checklist (<code>intake_checklist.md</code>) covers these comprehensively. The most important:<br />
+- Has a §16(1) application been filed? By whom? When did John receive it?<br />
+- What §111F payments has the Town made to date? Any §100 reimbursements paid separately?<br />
+- What does John's treating neurosurgeon say about prognosis and future treatment?<br />
+- Has any light-duty assignment been offered or considered?<br />
+- What is the union local number? Has the union been engaged? Any grievances filed?<br />
+- Any written Town communications on post-retirement medical liability — emails, letters, memos?</p>
+<hr />
+<h2>Reference Authorities Quickly Cited</h2>
+<p><strong>Statutes:</strong><br />
+- M.G.L. c. 41, § 100 (https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section100)<br />
+- M.G.L. c. 41, § 100B (https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section100B)<br />
+- M.G.L. c. 41, § 111F (https://malegislature.gov/Laws/GeneralLaws/PartI/TitleVII/Chapter41/Section111F)<br />
+- M.G.L. c. 32, § 7 (accidental disability retirement)<br />
+- M.G.L. c. 32, § 16(1) (involuntary retirement procedure)<br />
+- M.G.L. c. 32, § 16(3) and (4) (appeals)<br />
+- M.G.L. c. 249, § 4 (certiorari)<br />
+- M.G.L. c. 231A (declaratory judgment)</p>
+<p><strong>Cases:</strong><br />
+- <em>Ware, Town of v. Hardwick, Town of</em>, 67 Mass. App. Ct. 325 (2006) — primary §100 authority<br />
+- <em>Wormstead v. Town Manager of Saugus</em>, 366 Mass. 659 (1975) — "performance of duty" interpretation<br />
+- <em>Politano v. Board of Selectmen of Watertown</em>, 12 Mass. App. Ct. 738 (1981) — §111F termination at retirement (we accept)<br />
+- <em>DiGloria v. Chief of Police of Methuen</em>, 8 Mass. App. Ct. 506 (1979) — "without fault" standard<br />
+- <em>Hennessey v. Bridgewater</em>, 388 Mass. 219 (1983) — §111F termination conditions<br />
+- <em>Paparo v. Town of Provincetown</em>, 34 Mass. App. Ct. 625 (1993) — anti-double-dipping rationale (cuts against extending §111F termination logic to §100/§100B)<br />
+- <em>Gardner v. City of Peabody</em>, 23 Mass. App. Ct. 168 (1986) — broad "performance of duty" reading</p>
+<p><strong>Local authorities:</strong><br />
+- Town of Danvers Bylaws Chapter XIX (Indemnification Panel) and Acceptance Record<br />
+- Danvers Fire Department CBA, FY25–FY27, Articles 4, 9 §5, 16, 22 §14, 23<br />
+- PERAC Involuntary Retirement Application form (https://www.mass.gov/doc/involuntary-retirement-application/download)</p>
+<hr />
+<h2>Project Files Available</h2>
+<p>The following files are in the project folder and available to counsel:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>project.md</code></td>
+<td>Master project framework</td>
+</tr>
+<tr>
+<td><code>claude.md</code></td>
+<td>Operating instructions</td>
+</tr>
+<tr>
+<td><code>memory.md</code></td>
+<td>Persistent facts and update log</td>
+</tr>
+<tr>
+<td><code>cba_analysis.md</code></td>
+<td>Detailed Danvers Fire CBA review</td>
+</tr>
+<tr>
+<td><code>statutory_memo.md</code></td>
+<td>Full statutory analysis (~22KB)</td>
+</tr>
+<tr>
+<td><code>caselaw_memo.md</code></td>
+<td>Case law review</td>
+</tr>
+<tr>
+<td><code>process_memo.md</code></td>
+<td>Procedural roadmap with phased strategy</td>
+</tr>
+<tr>
+<td><code>intake_checklist.md</code></td>
+<td>Information request to John</td>
+</tr>
+<tr>
+<td><code>strategic_summary.md</code></td>
+<td>This document</td>
+</tr>
+<tr>
+<td><code>danvers_fire_cba_fy25-fy27.pdf</code></td>
+<td>The actual CBA</td>
+</tr>
+<tr>
+<td><code>danvers_bylaws.pdf</code></td>
+<td>Town Bylaws (Chapter XIX, acceptance record)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>A Final Note for Counsel</h2>
+<p>This case has unusually clean facts on the §100B issue:<br />
+- A documented Town Meeting acceptance from 1973<br />
+- A standing bylaw panel<br />
+- A current CBA expressly incorporating the statute<br />
+- A Town that is currently building John's §100B causation case via its own §7 ADR push<br />
+- No adverse Massachusetts appellate authority on §100B specifically</p>
+<p>The principal risk is procedural — that John signs something during the retirement process that compromises §100B rights. The principal opportunity is that the Town may not realize how strong John's §100B posture is and may settle on more favorable terms than would otherwise be available, particularly if a written demand for §100B acknowledgment is made early in the process.</p>
+<hr />
+<p><em>Research support produced pre-retention. Not legal advice. The work product reflects the research available at the time and is offered to assist counsel's independent analysis. Counsel should independently verify all citations and consider any relevant DALA/CRAB administrative authority not exhaustively reviewed in this package.</em></p>
+    <div class="legal-disclaimer">
+      Research support produced by Mike Sweeney / Fructify LLC. Not legal advice. Independent Massachusetts public-sector labor counsel required for any actionable step. Recommended firms: Sandulli Grace; Pyle Rome Ehrenberg.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="brand-mark">FRUCTIFY LLC</p>
+    <p>Marek Case Resources &middot; Updated April 28, 2026</p>
+    <p><a href="index.html" style="color:#94a3b8;">Return to dashboard</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

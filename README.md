@@ -1,49 +1,51 @@
 # Marek Case Resources
 
-**Live dashboard:** https://fructifyme.github.io/fructify100B/
-
-Research package supporting John Marek, Danvers firefighter, on the §100B post-retirement medical indemnification question.
-
-**This is not legal advice.** It is pre-retention research support produced by Mike Sweeney / Fructify LLC. Independent Massachusetts public-sector labor counsel is required before any action.
+> **Prepared by FRUCTIFY LLC** &middot; Mike Sweeney
+> Massachusetts firefighter §100B research package
+> *Pre-retention research support &mdash; not legal advice.*
 
 ---
 
-## Where to start
+**Live dashboard (start here):** https://fructifyme.github.io/fructify100B/
 
-- **John** — open [`johns_pocket_card.md`](johns_pocket_card.md) and read it before any meeting with the Town or the union.
-- **Union or independent counsel** — open [`strategic_summary.md`](strategic_summary.md). It is the one-page brief.
-- **Anyone who wants the full picture** — open `index.html` in a browser. It is the dashboard view of everything in this repo.
+The dashboard is the front door. Open it in any browser. The "For John" tab opens by default.
+
+---
 
 ## The thesis in one sentence
 
 Section 111F ending at retirement says nothing about §100B, which Danvers accepted at Town Meeting on March 20, 1973 and incorporated into the current Fire CBA at Article 16, §1 — and §100B is exactly the statute designed to cover post-retirement medical care for ADR retirees.
 
-## Contents
+## Direct links to each document
+
+Click any link below to read the rendered page in your browser. The original `.md` source files are also in this repo for editing.
 
 ### For John
-| File | What it is |
+| Document | Open |
 |---|---|
-| [`johns_pocket_card.md`](johns_pocket_card.md) | One-page meeting card. Print it. Bring it. |
-| [`memo_for_union_counsel.md`](memo_for_union_counsel.md) | Hand to the union attorney at the start of any meeting. |
-| [`intake_checklist.md`](intake_checklist.md) | What to send Mike. |
+| Pocket Card (one-page meeting card) | [HTML](https://fructifyme.github.io/fructify100B/johns_pocket_card.html) |
+| Memo for Union Counsel | [HTML](https://fructifyme.github.io/fructify100B/memo_for_union_counsel.html) |
+| Intake Checklist | [HTML](https://fructifyme.github.io/fructify100B/intake_checklist.html) |
 
-### For counsel
-| File | What it is |
+### For Counsel
+| Document | Open |
 |---|---|
-| [`strategic_summary.md`](strategic_summary.md) | One-page brief. Three-track framework. Recommended action sequence. |
-| [`statutory_memo.md`](statutory_memo.md) | Full §111F vs §100 vs §100B analysis. |
-| [`caselaw_memo.md`](caselaw_memo.md) | *Ware*, *Wormstead*, *Politano*, and progeny. |
-| [`cba_analysis.md`](cba_analysis.md) | Danvers Fire CBA review. |
-| [`process_memo.md`](process_memo.md) | Phased procedural roadmap. |
+| Strategic Summary | [HTML](https://fructifyme.github.io/fructify100B/strategic_summary.html) |
+| Statutory Memo | [HTML](https://fructifyme.github.io/fructify100B/statutory_memo.html) |
+| Case Law Memo | [HTML](https://fructifyme.github.io/fructify100B/caselaw_memo.html) |
+| CBA Analysis | [HTML](https://fructifyme.github.io/fructify100B/cba_analysis.html) |
+| Process Memo | [HTML](https://fructifyme.github.io/fructify100B/process_memo.html) |
 
-### Source documents
-- [`danvers_fire_cba_fy25-fy27.pdf`](danvers_fire_cba_fy25-fy27.pdf) — the actual CBA
-- [`danvers_bylaws.pdf`](danvers_bylaws.pdf) — Town Bylaws including Chapter XIX and the statute acceptance record
+### Source documents (PDFs)
+- [Danvers Fire CBA, FY25–FY27](danvers_fire_cba_fy25-fy27.pdf)
+- [Danvers Town Bylaws (incl. Chapter XIX and the statute acceptance record)](danvers_bylaws.pdf)
 
 ### Project meta
-- [`project.md`](project.md) — master project framework
-- [`memory.md`](memory.md) — persistent facts and update log
-- [`claude.md`](claude.md) — research workflow operating instructions
+| Document | Open |
+|---|---|
+| Project Framework | [HTML](https://fructifyme.github.io/fructify100B/project.html) |
+| Memory / Persistent Facts | [HTML](https://fructifyme.github.io/fructify100B/memory.html) |
+| Operating Instructions | [HTML](https://fructifyme.github.io/fructify100B/claude.html) |
 
 ## Key dates
 
@@ -59,4 +61,4 @@ Two Massachusetts firms handle exactly this kind of case for firefighters:
 
 ---
 
-*Maintained by Mike Sweeney / Fructify LLC. Do not redistribute without permission.*
+*Maintained by FRUCTIFY LLC. Mike Sweeney, fructifyme@gmail.com. Do not redistribute without permission.*

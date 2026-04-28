@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Framework &mdash; Marek Case Resources</title>
+<style>
+:root {
+  --navy: #0f2747;
+  --navy-light: #1d3a63;
+  --slate: #475569;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --accent: #b91c1c;
+  --accent-soft: #fef2f2;
+  --good: #047857;
+  --warn: #b45309;
+  --warn-soft: #fffbeb;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+}
+.container { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+header.site-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 18px 0;
+  border-bottom: 4px solid var(--accent);
+}
+header.site-header .topline {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.18em;
+  color: #fff; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 5px 10px; border-radius: 3px;
+}
+.brand:hover { background: rgba(255,255,255,0.08); }
+.back-link {
+  font-size: 13px; color: #cbd5e1; text-decoration: none;
+}
+.back-link:hover { color: #fff; text-decoration: underline; }
+.page-meta {
+  margin-top: 12px; font-size: 13px; color: #cbd5e1;
+}
+.page-title {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 26px 0 22px;
+}
+.page-title h1 {
+  margin: 0 0 6px; font-size: 26px; color: var(--navy); font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.page-title .crumb { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.crumb.for-john { color: var(--accent); }
+.crumb.for-counsel { color: var(--navy-light); }
+.crumb.meta { color: var(--slate); }
+main.content { padding: 32px 0 60px; }
+main.content h1, main.content h2, main.content h3, main.content h4 {
+  color: var(--navy); margin-top: 28px; margin-bottom: 10px; line-height: 1.3;
+  font-weight: 600;
+}
+main.content h1 { font-size: 24px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+main.content h2 { font-size: 20px; }
+main.content h3 { font-size: 17px; color: var(--navy-light); }
+main.content h4 { font-size: 15px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.04em; }
+main.content p { margin: 0 0 14px; }
+main.content ul, main.content ol { margin: 0 0 14px; padding-left: 24px; }
+main.content li { margin-bottom: 6px; }
+main.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 16px 0; padding: 10px 18px;
+  background: var(--accent-soft); border-radius: 4px;
+  color: var(--text); font-style: italic;
+}
+main.content blockquote p:last-child { margin-bottom: 0; }
+main.content table {
+  width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px;
+}
+main.content th, main.content td {
+  border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top;
+}
+main.content th { background: var(--navy); color: #fff; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
+main.content tr:nth-child(even) td { background: #f8fafc; }
+main.content code {
+  font-family: "SF Mono", Consolas, Menlo, monospace; font-size: 13px;
+  background: #f1f5f9; padding: 1px 6px; border-radius: 3px; color: var(--navy);
+}
+main.content pre {
+  background: #0f172a; color: #e2e8f0; padding: 14px 18px; border-radius: 6px;
+  overflow-x: auto; font-size: 13px;
+}
+main.content pre code { background: transparent; color: inherit; padding: 0; }
+main.content a { color: var(--navy-light); }
+main.content hr { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+main.content em { color: var(--text); }
+main.content strong { color: var(--navy); }
+.legal-disclaimer {
+  background: #f1f5f9; border: 1px solid var(--border);
+  padding: 14px 18px; border-radius: 4px; margin: 24px 0;
+  font-size: 13px; color: var(--muted); font-style: italic;
+}
+footer {
+  background: #0a1729; color: #94a3b8; padding: 24px 0;
+  font-size: 13px; text-align: center; margin-top: 40px;
+}
+footer p { margin: 4px 0; }
+footer .brand-mark { color: #fff; font-weight: 700; letter-spacing: 0.18em; font-size: 12px; }
+@media print {
+  header.site-header, footer, .back-link { display: none; }
+  body { background: white; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="topline">
+      <a class="brand" href="https://fructify.solutions" target="_blank" rel="noopener">FRUCTIFY</a>
+      <a class="back-link" href="index.html">&larr; Back to dashboard</a>
+    </div>
+    <div class="page-meta">Marek Case Resources &middot; case package prepared by Fructify LLC</div>
+  </div>
+</header>
+
+<div class="page-title">
+  <div class="container">
+    <div class="crumb meta">Project Meta</div>
+    <h1>Project Framework</h1>
+  </div>
+</div>
+
+<main class="content">
+  <div class="container">
+<h1>Marek — 111F / §100 Research Project</h1>
+<h2>Client</h2>
+<p><strong>John Marek</strong> — Firefighter, Danvers Fire Department (Danvers, MA)<br />
+Engaged via Mike Sweeney, Fructify LLC.</p>
+<h2>Issue Summary</h2>
+<p>John has been injured on duty twice while serving as a Danvers firefighter, with injuries severe enough to require extensive neck surgery and surgical hardware. The Town has indicated he cannot return to duty and is moving to force him out via disability retirement. The Town has further told John that <strong>once he retires, the municipality is no longer responsible for his ongoing medical treatment</strong> related to his line-of-duty injuries. The Town referenced "111F" as the basis for this position.</p>
+<p>The client's objective is to remain entitled to municipal payment of medical, surgical, and hospital expenses for his line-of-duty injuries after retirement — and to ensure any forced retirement follows lawful process. Our role is to assemble the statutory, regulatory, and case-law record needed to support John and his counsel/union representative in pushing back.</p>
+<h2>Working Legal Thesis</h2>
+<p>The Town conflates two distinct statutory schemes:</p>
+<ol>
+<li><strong>M.G.L. c. 41, § 111F</strong> — pays full salary (tax-free) and medical expenses to a police officer or firefighter while <em>incapacitated from duty</em> by a job-related injury. Tied to active-employee status; terminates on retirement.</li>
+<li><strong>M.G.L. c. 41, § 100</strong> — a separate, freestanding municipal duty to <strong>indemnify</strong> police officers and firefighters for reasonable medical, surgical, and hospital expenses incurred as a result of injuries sustained in the performance of duty. This obligation is <em>not</em> extinguished by retirement.</li>
+</ol>
+<p>Working thesis: §100 survives retirement and continues to obligate the Town to pay reasonable medical expenses causally connected to John's line-of-duty injuries, including future treatment related to the cervical injuries and hardware. The Town's "111F ends at retirement, therefore we owe nothing" position is legally incomplete.</p>
+<p>A secondary thesis: any move to force John into Accidental Disability Retirement (M.G.L. c. 32, § 7) must follow the statutory process — application, regional medical panel certification, retirement board action, and hearing rights. The Town cannot unilaterally "force him out."</p>
+<h2>Key Statutes and Regulations</h2>
+<ul>
+<li><strong>M.G.L. c. 41, § 111F</strong> — IOD leave with pay (police/fire)</li>
+<li><strong>M.G.L. c. 41, § 100</strong> — indemnification for medical/hospital expenses (police/fire)</li>
+<li><strong>M.G.L. c. 41, § 100B</strong> — related indemnification provisions</li>
+<li><strong>M.G.L. c. 41, § 100G</strong> — if applicable to Danvers</li>
+<li><strong>M.G.L. c. 32, § 6</strong> — ordinary disability retirement (likely not the path here)</li>
+<li><strong>M.G.L. c. 32, § 7</strong> — accidental disability retirement (the likely vehicle)</li>
+<li><strong>M.G.L. c. 32, § 8</strong> — re-examination, restoration to service</li>
+<li><strong>M.G.L. c. 32, § 9</strong> — accidental death (context)</li>
+<li><strong>M.G.L. c. 32, § 94</strong> — heart law presumption (firefighters)</li>
+<li><strong>M.G.L. c. 32, § 94A</strong> — cancer presumption (firefighters)</li>
+<li><strong>M.G.L. c. 32, § 101</strong> — lump sum / annuity option for line-of-duty injury</li>
+<li><strong>840 CMR</strong> — PERAC regulations on disability retirement process, regional medical panels, board procedure</li>
+<li><strong>M.G.L. c. 152</strong> — workers' comp (firefighters generally excluded; relevance is the exclusion itself)</li>
+</ul>
+<h2>Case Law Targets</h2>
+<ul>
+<li><em>Wormstead v. Town Manager of Saugus</em>, 366 Mass. 659 (1975) — foundational §100 indemnification case</li>
+<li>Progeny interpreting scope of §100 medical obligation</li>
+<li>Cases addressing whether §100 obligations survive retirement / cessation of active service</li>
+<li>Cases on involuntary ADR process and procedural protections</li>
+<li>Cases on causation standards for §100 reimbursement disputes</li>
+<li>Recent SJC / Appeals Court decisions (last 5–7 years) reshaping IOD / §100 / §111F doctrine</li>
+<li>DALA / CRAB decisions (Division of Administrative Law Appeals / Contributory Retirement Appeal Board) on contested ADR and §100 reimbursement claims</li>
+</ul>
+<h2>Open Questions / Information Needed from John</h2>
+<p>See <code>intake_checklist.md</code> for the client-facing version. Internally:<br />
+- Has any ADR application been filed? By whom (John or appointing authority)?<br />
+- What §111F payments has the Town made to date, and on what timeline?<br />
+- Has the Town ever paid §100 medical reimbursements separately from §111F?<br />
+- Is there written communication from the Town stating medical liability ends at retirement?<br />
+- What is John's union local? Who is his rep?<br />
+- Treating physician(s) and prognosis — is future treatment specifically expected?<br />
+- Status of any local retirement board correspondence<br />
+- Copy of the current Danvers Firefighters CBA and any side letters<br />
+- Any past practice or Town past payments to retired firefighters for IOD-related medical care</p>
+<h2>Deliverables Roadmap</h2>
+<ol>
+<li><strong>Setup phase (this phase):</strong> project.md, claude.md, memory.md, intake checklist, CBA capture</li>
+<li><strong>Statutory memo:</strong> Detailed §111F vs §100 distinction with full statutory text and analysis</li>
+<li><strong>Case law memo:</strong> <em>Wormstead</em> and progeny, post-retirement §100 cases, involuntary ADR process cases</li>
+<li><strong>CBA analysis:</strong> Provisions on IOD, medical reimbursement, grievance, past practice</li>
+<li><strong>Process memo:</strong> What the Town must do procedurally to retire John involuntarily, and where the leverage points are</li>
+<li><strong>§101 lump sum analysis:</strong> Whether this option applies and how it interacts with §100</li>
+<li><strong>Strategic summary:</strong> Consolidated brief John can hand to a labor attorney</li>
+</ol>
+<h2>Engagement Boundaries</h2>
+<p>This project produces <strong>research support only</strong>. Nothing in any deliverable constitutes legal advice. John should retain a Massachusetts public-sector labor attorney experienced in c. 41 / c. 32 firefighter matters. The IAFF Massachusetts locals typically work with firms such as Sandulli Grace, Pyle Rome Ehrenberg, or local-counsel equivalents. Every substantive deliverable will close with a reminder to that effect.</p>
+<h2>Working Folder</h2>
+<p><code>/home/claude/mendalka/</code> — files in this folder are the canonical research artifacts for the project.</p>
+    <div class="legal-disclaimer">
+      Research support produced by Mike Sweeney / Fructify LLC. Not legal advice. Independent Massachusetts public-sector labor counsel required for any actionable step. Recommended firms: Sandulli Grace; Pyle Rome Ehrenberg.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="brand-mark">FRUCTIFY LLC</p>
+    <p>Marek Case Resources &middot; Updated April 28, 2026</p>
+    <p><a href="index.html" style="color:#94a3b8;">Return to dashboard</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

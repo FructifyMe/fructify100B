@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John's Pocket Card &mdash; Marek Case Resources</title>
+<style>
+:root {
+  --navy: #0f2747;
+  --navy-light: #1d3a63;
+  --slate: #475569;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --accent: #b91c1c;
+  --accent-soft: #fef2f2;
+  --good: #047857;
+  --warn: #b45309;
+  --warn-soft: #fffbeb;
+  --text: #1e293b;
+  --muted: #64748b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+}
+.container { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+header.site-header {
+  background: var(--navy);
+  color: #fff;
+  padding: 18px 0;
+  border-bottom: 4px solid var(--accent);
+}
+header.site-header .topline {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.18em;
+  color: #fff; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 5px 10px; border-radius: 3px;
+}
+.brand:hover { background: rgba(255,255,255,0.08); }
+.back-link {
+  font-size: 13px; color: #cbd5e1; text-decoration: none;
+}
+.back-link:hover { color: #fff; text-decoration: underline; }
+.page-meta {
+  margin-top: 12px; font-size: 13px; color: #cbd5e1;
+}
+.page-title {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 26px 0 22px;
+}
+.page-title h1 {
+  margin: 0 0 6px; font-size: 26px; color: var(--navy); font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.page-title .crumb { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.crumb.for-john { color: var(--accent); }
+.crumb.for-counsel { color: var(--navy-light); }
+.crumb.meta { color: var(--slate); }
+main.content { padding: 32px 0 60px; }
+main.content h1, main.content h2, main.content h3, main.content h4 {
+  color: var(--navy); margin-top: 28px; margin-bottom: 10px; line-height: 1.3;
+  font-weight: 600;
+}
+main.content h1 { font-size: 24px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+main.content h2 { font-size: 20px; }
+main.content h3 { font-size: 17px; color: var(--navy-light); }
+main.content h4 { font-size: 15px; color: var(--slate); text-transform: uppercase; letter-spacing: 0.04em; }
+main.content p { margin: 0 0 14px; }
+main.content ul, main.content ol { margin: 0 0 14px; padding-left: 24px; }
+main.content li { margin-bottom: 6px; }
+main.content blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 16px 0; padding: 10px 18px;
+  background: var(--accent-soft); border-radius: 4px;
+  color: var(--text); font-style: italic;
+}
+main.content blockquote p:last-child { margin-bottom: 0; }
+main.content table {
+  width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px;
+}
+main.content th, main.content td {
+  border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top;
+}
+main.content th { background: var(--navy); color: #fff; font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
+main.content tr:nth-child(even) td { background: #f8fafc; }
+main.content code {
+  font-family: "SF Mono", Consolas, Menlo, monospace; font-size: 13px;
+  background: #f1f5f9; padding: 1px 6px; border-radius: 3px; color: var(--navy);
+}
+main.content pre {
+  background: #0f172a; color: #e2e8f0; padding: 14px 18px; border-radius: 6px;
+  overflow-x: auto; font-size: 13px;
+}
+main.content pre code { background: transparent; color: inherit; padding: 0; }
+main.content a { color: var(--navy-light); }
+main.content hr { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+main.content em { color: var(--text); }
+main.content strong { color: var(--navy); }
+.legal-disclaimer {
+  background: #f1f5f9; border: 1px solid var(--border);
+  padding: 14px 18px; border-radius: 4px; margin: 24px 0;
+  font-size: 13px; color: var(--muted); font-style: italic;
+}
+footer {
+  background: #0a1729; color: #94a3b8; padding: 24px 0;
+  font-size: 13px; text-align: center; margin-top: 40px;
+}
+footer p { margin: 4px 0; }
+footer .brand-mark { color: #fff; font-weight: 700; letter-spacing: 0.18em; font-size: 12px; }
+@media print {
+  header.site-header, footer, .back-link { display: none; }
+  body { background: white; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="topline">
+      <a class="brand" href="https://fructify.solutions" target="_blank" rel="noopener">FRUCTIFY</a>
+      <a class="back-link" href="index.html">&larr; Back to dashboard</a>
+    </div>
+    <div class="page-meta">Marek Case Resources &middot; case package prepared by Fructify LLC</div>
+  </div>
+</header>
+
+<div class="page-title">
+  <div class="container">
+    <div class="crumb for-john">For John</div>
+    <h1>John's Pocket Card</h1>
+  </div>
+</div>
+
+<main class="content">
+  <div class="container">
+<h1>John's Pocket Card — 3:30 Meeting</h1>
+<p><strong>Read this before walking in. Keep it with you. Reference it as needed.</strong></p>
+<hr />
+<h2>The Three Things You Must Hold To</h2>
+<ol>
+<li>
+<p><strong>§111F ending at retirement is not the same as "the Town owes no medical."</strong> Don't let anyone collapse the two.</p>
+</li>
+<li>
+<p><strong>The statute that matters is §100B.</strong> Danvers accepted it at Town Meeting on <strong>March 20, 1973</strong>. It is in your <strong>CBA at Article 16, Section 1</strong>. It pays for medical care of your duty injuries <em>after</em> you retire.</p>
+</li>
+<li>
+<p><strong>Don't sign anything today.</strong> Not retirement papers. Not a release. Not a settlement. Not a "memorandum of understanding." Nothing.</p>
+</li>
+</ol>
+<hr />
+<h2>If the Town Says This → You Say This</h2>
+<table>
+<thead>
+<tr>
+<th>Town says</th>
+<th>You say</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"111F ends at retirement, so we're done."</td>
+<td>"Right about 111F. What about §100B? Danvers accepted it in 1973 and it's in our CBA at Article 16."</td>
+</tr>
+<tr>
+<td>"We don't pay medical after retirement."</td>
+<td>"The Town Bylaws say differently. Chapter XIX establishes the panel that administers §100B claims. Why is the Town ignoring its own bylaws?"</td>
+</tr>
+<tr>
+<td>"§100B is permissive, not mandatory."</td>
+<td>"Once accepted, the panel must certify if the five criteria are met. Arbitrary denial is reviewable in court."</td>
+</tr>
+<tr>
+<td>"You'll have your insurance and your pension."</td>
+<td>"§100B is on top of those. It exists specifically because retirees need indemnification for treatment of duty injuries. That's me."</td>
+</tr>
+<tr>
+<td>"Just sign here and we'll work it out."</td>
+<td>"I'm not signing anything today. I'll review with counsel and come back."</td>
+</tr>
+<tr>
+<td>"We need to wrap this up before [date]."</td>
+<td>"Statutory rights don't run on the Town's calendar. I'm not signing under pressure."</td>
+</tr>
+<tr>
+<td>"Light duty isn't an option."</td>
+<td>"CBA Article 22, Section 14 references a light-duty committee. Has a policy been adopted? If a role exists, I can do it."</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>What You Want Out of the Meeting</h2>
+<ol>
+<li><strong>The union and its attorney to demand, in writing today,</strong> that the Town acknowledge §100B applies to your situation post-retirement.</li>
+<li><strong>Confirmation that the union will file a grievance</strong> if the Town refuses to acknowledge §100B (it's a CBA violation under Article 16).</li>
+<li><strong>No retirement papers signed today.</strong> None.</li>
+<li><strong>A written record</strong> of what the Town said in the meeting. If the union attorney is taking notes, ask for a copy. If they aren't, take your own.</li>
+</ol>
+<hr />
+<h2>If the Union Attorney Hesitates or Pushes You to Settle</h2>
+<p>Ask these questions, in order:</p>
+<ol>
+<li>"Are you familiar with §100B and that Danvers accepted it in 1973?"</li>
+<li>"Do you agree the CBA at Article 16, Section 1 incorporates §100B as a contract term?"</li>
+<li>"If §100B applies, why would I sign anything that doesn't acknowledge it?"</li>
+<li>"What's the union's position — does the union agree §100B applies to me?"</li>
+<li>"If the Town denies §100B applies, will the union grieve it under Article 4?"</li>
+</ol>
+<p>If the answer to #5 is "no" or "we'll see," the union is not protecting you and you need independent counsel before signing anything. <strong>Sandulli Grace</strong> and <strong>Pyle Rome Ehrenberg</strong> are the two firms in Massachusetts that handle exactly this kind of case for firefighters.</p>
+<hr />
+<h2>Things You Are Not Required to Decide Today</h2>
+<ul>
+<li>Whether to retire</li>
+<li>The amount of any pension or settlement</li>
+<li>Whether to take a §101 lump sum</li>
+<li>Whether to sign a release</li>
+<li>Whether to drop any pending grievance</li>
+<li>Whether to accept the Town's framing of "what 111F means"</li>
+</ul>
+<hr />
+<h2>If You Feel Pressured</h2>
+<p>Say, calmly: <strong>"I appreciate the meeting. I need to take this back, review with my own counsel, and respond in writing. I'm not making decisions or signing anything today."</strong></p>
+<p>Then leave if needed. You have the right to walk out.</p>
+<hr />
+<h2>The One Sentence to Remember</h2>
+<blockquote>
+<p><strong>"Section 111F ending at retirement says nothing about §100B, which Danvers accepted in 1973 and incorporated into the current CBA — and §100B is exactly the statute designed to cover my post-retirement medical care for these injuries."</strong></p>
+</blockquote>
+<p>Memorize it. Say it as many times as needed.</p>
+<hr />
+<h2>Bring With You</h2>
+<ul>
+<li>This card</li>
+<li>The memo for the union attorney (<code>memo_for_union_counsel.md</code>) — print and hand it over at the start of the meeting</li>
+<li>A pen and paper to take notes</li>
+<li>The request for: written §100B acknowledgment, no signing today, and union's commitment to grieve under Article 4 if needed</li>
+</ul>
+<hr />
+<p><em>You know more than they think you do. Stay calm. Don't sign. Walk out if needed.</em></p>
+    <div class="legal-disclaimer">
+      Research support produced by Mike Sweeney / Fructify LLC. Not legal advice. Independent Massachusetts public-sector labor counsel required for any actionable step. Recommended firms: Sandulli Grace; Pyle Rome Ehrenberg.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="brand-mark">FRUCTIFY LLC</p>
+    <p>Marek Case Resources &middot; Updated April 28, 2026</p>
+    <p><a href="index.html" style="color:#94a3b8;">Return to dashboard</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

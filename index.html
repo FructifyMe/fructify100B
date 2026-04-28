@@ -42,6 +42,31 @@
     padding: 28px 0 24px;
     border-bottom: 4px solid var(--accent);
   }
+  header.site-header .brandline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  header.site-header .brand-mark {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 12px;
+    border-radius: 3px;
+  }
+  header.site-header .brand-mark:hover { background: rgba(255,255,255,0.08); }
+  header.site-header .brand-tag {
+    color: #cbd5e1;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
   header.site-header h1 {
     margin: 0 0 6px;
     font-size: 26px;
@@ -301,6 +326,10 @@
 
 <header class="site-header">
   <div class="container">
+    <div class="brandline">
+      <a class="brand-mark" href="https://fructify.solutions" target="_blank" rel="noopener">FRUCTIFY</a>
+      <span class="brand-tag">Case package prepared by Fructify LLC</span>
+    </div>
     <h1>Marek Case Resources</h1>
     <p class="sub">Massachusetts firefighter disability retirement &mdash; M.G.L. c. 41 &sect; 100B research package &mdash; updated April 28, 2026</p>
     <div class="status-banner">
@@ -398,7 +427,7 @@
         </li>
         <li>
           <div class="label"><span class="pill soon">Soon</span></div>
-          <strong>Complete the intake checklist.</strong> Send Mike whatever you have on file: medical records, Town communications, &sect;111F payment history, union correspondence. See <a href="intake_checklist.md">intake_checklist.md</a>.
+          <strong>Complete the intake checklist.</strong> Send Mike whatever you have on file: medical records, Town communications, &sect;111F payment history, union correspondence. See the <a href="intake_checklist.html">intake checklist</a>.
         </li>
         <li>
           <div class="label"><span class="pill soon">Soon</span></div>
@@ -631,17 +660,17 @@
       <div class="doc-grid">
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="johns_pocket_card.md">John's Pocket Card</a>
+          <a href="johns_pocket_card.html">John's Pocket Card</a>
           <p>One-page meeting card: the one sentence to remember, do/don't, &ldquo;if Town says &rarr; you say&rdquo; script, what you do not have to decide today. Print and bring to meetings.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="memo_for_union_counsel.md">Memo for Union Counsel</a>
+          <a href="memo_for_union_counsel.html">Memo for Union Counsel</a>
           <p>Hand to the union attorney at the start of the meeting. Frames the &sect;100B argument and what to demand from the Town.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="intake_checklist.md">Intake Checklist</a>
+          <a href="intake_checklist.html">Intake Checklist</a>
           <p>What to send Mike: medical records, Town communications, &sect;111F payment history, union correspondence. Send what you have.</p>
         </div>
       </div>
@@ -650,27 +679,27 @@
       <div class="doc-grid">
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="strategic_summary.md">Strategic Summary</a>
+          <a href="strategic_summary.html">Strategic Summary</a>
           <p>One-page brief for counsel. The three-track framework, why the Town's position fails, recommended action sequence, key authorities. Start here.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="statutory_memo.md">Statutory Memo</a>
+          <a href="statutory_memo.html">Statutory Memo</a>
           <p>Full statutory analysis: &sect;111F vs &sect;100 vs &sect;100B. Town acceptance record. CBA incorporation. The &sect;100B operative argument.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="caselaw_memo.md">Case Law Memo</a>
+          <a href="caselaw_memo.html">Case Law Memo</a>
           <p><em>Ware v. Hardwick</em>, <em>Wormstead</em>, <em>Politano</em>, and progeny. Lead authority and the absence of adverse authority on &sect;100B.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="cba_analysis.md">CBA Analysis</a>
+          <a href="cba_analysis.html">CBA Analysis</a>
           <p>Detailed Danvers Fire CBA review. Article 16 incorporation. Article 4 grievance/arbitration. Articles 22, 23, 9 procedural levers.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="process_memo.md">Process Memo</a>
+          <a href="process_memo.html">Process Memo</a>
           <p>Procedural roadmap with phased strategy: stabilize, file &sect;100, pre-retirement lockdown, post-retirement &sect;100B cadence.</p>
         </div>
       </div>
@@ -693,17 +722,17 @@
       <div class="doc-grid">
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="project.md">project.md</a>
+          <a href="project.html">project.md</a>
           <p>Master project framework.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="memory.md">memory.md</a>
+          <a href="memory.html">memory.md</a>
           <p>Persistent facts, statutory cheat sheet, Danvers-specific record, update log.</p>
         </div>
         <div class="doc-card">
           <span class="file-type">md</span>
-          <a href="claude.md">claude.md</a>
+          <a href="claude.html">claude.md</a>
           <p>Operating instructions for the research workflow.</p>
         </div>
       </div>
@@ -718,8 +747,9 @@
 
 <footer>
   <div class="container">
+    <p style="font-weight: 700; letter-spacing: 0.18em; color: #fff; font-size: 12px; margin-bottom: 8px;">FRUCTIFY LLC</p>
     <p>Marek Case Resources &middot; Pre-retention research package</p>
-    <p>Mike Sweeney / Fructify LLC &middot; Updated April 28, 2026</p>
+    <p>Mike Sweeney &middot; Updated April 28, 2026</p>
   </div>
 </footer>
 
