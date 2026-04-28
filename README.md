@@ -1,6 +1,8 @@
 # Mendalka Case Resources
 
-Private research package supporting John Mendalka, Danvers firefighter, on the §100B post-retirement medical indemnification question.
+**Live dashboard:** https://fructifyme.github.io/fructify100B/
+
+Research package supporting John Mendalka, Danvers firefighter, on the §100B post-retirement medical indemnification question.
 
 **This is not legal advice.** It is pre-retention research support produced by Mike Sweeney / Fructify LLC. Independent Massachusetts public-sector labor counsel is required before any action.
 
